@@ -48,6 +48,7 @@ class CategoryViewController: UITableViewController {
         }
         tableView.reloadData()
     }
+    
     func loadCategories() {
         let request : NSFetchRequest<Category> = Category.fetchRequest()
         do {
@@ -57,6 +58,7 @@ class CategoryViewController: UITableViewController {
         }
         tableView.reloadData()
     }
+    
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add new Category", message: "", preferredStyle: .alert)
