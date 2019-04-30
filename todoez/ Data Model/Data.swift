@@ -1,0 +1,15 @@
+//
+//  Data.swift
+//  todoez
+//
+//  Created by Anurag A on 30/04/19.
+//  Copyright © 2019 Anurag A. All rights reserved.
+//
+
+import Foundation
+import RealmSwift
+
+class Data: Object {
+    @objc dynamic var name : String = ""
+    @objc dynamic var age : Int = 0
+}
