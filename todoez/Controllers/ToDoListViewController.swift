@@ -12,6 +12,7 @@ import ChameleonFramework
 
 class ToDoListViewController: SwipeTableViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     var todoItems : Results<Item>?
     let realm = try! Realm()
     var selectedCategory : Category? {
@@ -21,15 +22,30 @@ class ToDoListViewController: SwipeTableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        //FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         tableView.separatorStyle = .none
-        if let colourHex = selectedCategory?.colour {
-            guard let navBar = navigationController?.navigationBar else{
-                fatalError("NavCont Does not exist")
-            }
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: colourHex)
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        title = selectedCategory?.name
+        guard let colourHex = selectedCategory?.colour else { fatalError() }
+        updateNavBar(withHexCode: colourHex)
+        
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        updateNavBar(withHexCode: "1D9BF6")
+    }
+    
+    func updateNavBar(withHexCode colourHexCode: String) {
+        guard let navBar = navigationController?.navigationBar else{
+            fatalError("NavCont Does not exist") }
+        guard let navBarColour = UIColor(hexString: colourHexCode) else { fatalError() }
+        navBar.barTintColor = navBarColour
+        navBar.tintColor = ContrastColorOf(navBarColour, returnFlat: true)
+        navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColour, returnFlat: true)]
+        searchBar.barTintColor = navBarColour
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoItems?.count ?? 1
     }
