@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ToDoEz-->
+        <!--Todo Eazy-->
         <scene sceneID="C0X-zU-X4U">
             <objects>
                 <tableViewController id="4RI-I2-r8e" customClass="CategoryViewController" customModule="todoez" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="4RI-I2-r8e" id="wXg-2Q-O51"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDoEz" id="ojC-4e-fAh">
+                    <navigationItem key="navigationItem" title="Todo Eazy" id="ojC-4e-fAh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BG5-G0-DN3">
                             <connections>
                                 <action selector="addButtonPressed:" destination="4RI-I2-r8e" id="VCE-z3-4nO"/>

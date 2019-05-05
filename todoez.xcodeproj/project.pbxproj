@@ -12,6 +12,7 @@
 		75441116227E096800B8526A /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75441115227E096800B8526A /* SwipeTableViewController.swift */; };
 		75563FAF2278BE67004C0907 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75563FAE2278BE67004C0907 /* Item.swift */; };
 		75563FB12278BE74004C0907 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75563FB02278BE74004C0907 /* Category.swift */; };
+		75B71B4C227ECA8F00CEE095 /* Group 78.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B71B4B227ECA8F00CEE095 /* Group 78.png */; };
 		75DDA1C22258F77000674820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DDA1C12258F77000674820 /* AppDelegate.swift */; };
 		75DDA1C42258F77000674820 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DDA1C32258F77000674820 /* ToDoListViewController.swift */; };
 		75DDA1C72258F77000674820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75DDA1C52258F77000674820 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		75441115227E096800B8526A /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		75563FAE2278BE67004C0907 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		75563FB02278BE74004C0907 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		75B71B4B227ECA8F00CEE095 /* Group 78.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Group 78.png"; path = "../../../../Downloads/Group 78.png"; sourceTree = "<group>"; };
 		75DDA1BE2258F77000674820 /* todoez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DDA1C12258F77000674820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75DDA1C32258F77000674820 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				756CD376225E408B0064C6A7 /* Views */,
 				756CD377225E40A70064C6A7 /* Supporting Files */,
 				75DDA1CD2258F77200674820 /* Info.plist */,
+				75B71B4B227ECA8F00CEE095 /* Group 78.png */,
 			);
 			path = todoez;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				75DDA1CC2258F77200674820 /* LaunchScreen.storyboard in Resources */,
 				75DDA1C92258F77200674820 /* Assets.xcassets in Resources */,
 				75DDA1C72258F77000674820 /* Main.storyboard in Resources */,
+				75B71B4C227ECA8F00CEE095 /* Group 78.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +414,9 @@
 			baseConfigurationReference = D20D66F8CF0509BBEB48FFE5 /* Pods-todoez.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8RGJ4WUYT;
 				INFOPLIST_FILE = todoez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.anurag.todoez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -428,7 +435,9 @@
 			baseConfigurationReference = 1A02A9EA58620239D708B4B7 /* Pods-todoez.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D8RGJ4WUYT;
 				INFOPLIST_FILE = todoez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,6 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.anurag.todoez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
